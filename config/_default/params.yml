@@ -559,7 +559,7 @@ firework:
 
 # show the copyright below each article
 article_copyright:
-  enable: false
+  enable: true
   content:
     author: true
     link: true
