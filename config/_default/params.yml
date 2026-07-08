@@ -709,7 +709,7 @@ player:
       audio:
         - name: 爱错
           artist: 王力宏
-          url: /moss-vein/music/爱错-王力宏.mp3
+          url: music/爱错-王力宏.mp3
   meting:
     # https://github.com/metowolf/MetingJS
     # if you want to use meting, please enable aplayer first

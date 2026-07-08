@@ -406,6 +406,10 @@
 
 {{- if $params.player.aplayer.enable -}}
   {{- if not $params.player.meting.enable -}}
+    {{- $audioList := slice -}}
+    {{- range $params.player.aplayer.options.audio -}}
+      {{- $audioList = $audioList | append (merge . (dict "url" (.url | relURL))) -}}
+    {{- end -}}
     <script>
     var setupAPlayer = () => {
       if (!{{ $params.player.disable_on_mobile | default false }} || !window.matchMedia('(max-width: 768px)').matches) {
@@ -424,7 +428,7 @@
         new APlayer({
             theme: "var(--color-link)",
             container: document.getElementById('aplayer'),
-            audio: JSON.parse({{ $params.player.aplayer.options.audio | jsonify }}) || [],
+            audio: JSON.parse({{ $audioList | jsonify }}) || [],
             fixed: isMobile ? true : ({{ $params.player.aplayer.options.fixed }} || false),
             autoplay: {{ $params.player.aplayer.options.autoplay }} || false,
             loop: '{{ $params.player.aplayer.options.loop }}' || 'all',
