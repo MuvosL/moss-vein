@@ -32,12 +32,11 @@ description: "这是一片苔藓覆盖的知识脉络"
 # subtitle: "少女祈祷中..."
 subtitle:
   typing:
-    enable: false
+    enable: true
     strings:
-      # - Sentence 1
-      # - Sentence 2
-      # - Sentence 3
-      # - Sentence 4
+      - 想，全是问题；做，全是答案
+      - 一片苔藓覆盖的知识脉络
+      - 在数字世界的脉络中留下痕迹
     typeSpeed: 100              # 打字速度（毫秒/字符）
     backSpeed: 50               # 删除速度（毫秒/字符）
     backDelay: 2000             # 打完一句话后，等待时间
@@ -649,12 +648,12 @@ injector:
 
 # Experimental, may have a lot of bugs, open with caution!
 pjax:
-  enable: false
+  enable: true
 
 # Experimental
 # https://github.com/GoogleChromeLabs/quicklink
 quicklink:
-  enable: false
+  enable: true
   # The `requestIdleCallback` timeout, in milliseconds.
   timeout: 3000
   # Whether or not the URLs within the options.el container should be treated as high priority.
@@ -666,7 +665,7 @@ quicklink:
 
 # Experimental
 service_worker:
-  enable: false
+  enable: true
 
 # Experimental
 live2d:
@@ -692,7 +691,7 @@ player:
     # https://github.com/DIYgod/APlayer
     enable: true
     options:
-      fixed: true
+      fixed: false
       autoplay: false
       loop: all
       order: list
