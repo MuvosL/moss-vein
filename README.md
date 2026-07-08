@@ -68,19 +68,30 @@ Hugo 提供强大的模板系统、多语言支持、丰富的短代码和极快
 - 演示站点：[d-sketon.github.io/hugo-theme-reimu](https://d-sketon.github.io/hugo-theme-reimu)
 - 许可证：MIT
 
-### 主题特性
+### 本站启用的功能
 
-- ✨ 完整的博客功能，响应式布局
-- 🌙 暗黑模式支持，多语言 (i18n)
-- 🖥️ 代码高亮与复制，KaTeX / MathJax 数学公式
-- 📊 Mermaid 流程图，Algolia 搜索集成
-- 💬 多评论系统支持（Valine / Waline / Twikoo / Gitalk / Giscus / Disqus / Utterances / Beaudar）
-- 🎵 APlayer / Meting 音乐播放器
-- 🖱️ 灵梦鼠标指针、烟花特效、加载动画
-- 👾 Live2D 看板娘集成
-- 🔄 PJAX 无刷新加载
-- 🎨 丰富的短代码（链接卡片、友链、热力图、标签轮盘、照片墙、标签页等）
-- 📰 RSS 订阅、不蒜子访客统计
+- 🌙 暗黑模式（跟随系统）
+- 🌐 中英文界面切换
+- 🔍 Algolia 站内全文搜索
+- 🎵 APlayer 音乐播放器
+- 📖 文章目录 (TOC)
+- 🖥️ 代码高亮与复制
+- ➗ KaTeX 数学公式
+- 📊 Mermaid 流程图
+- 🖱️ 烟花特效、加载动画
+- 🔄 PJAX 无刷新页面切换
+- ⚡ 预加载链接 (Quicklink)
+- 📡 RSS 订阅
+- 📊 不蒜子访客统计
+- 📝 文章版权声明
+- 📎 分享按钮（微博 / QQ / 微信）
+- 📂 首页分类卡片
+- 💬 打字副标题
+- 🏷️ 三角徽标
+- 🔤 Pangu 中英文自动空格
+- ⬆️ 回到顶部
+- 📱 响应式布局
+- 💾 Service Worker 离线缓存
 
 ### 主题贡献者
 
