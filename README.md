@@ -101,10 +101,6 @@ Hugo 提供强大的模板系统、多语言支持、丰富的短代码和极快
 
 如果你喜欢这个主题，可以通过 [爱发电](https://afdian.com/a/dsketon) 支持作者 D-Sketon。
 
-### Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=D-Sketon/hugo-theme-reimu&type=date&legend=top-left)](https://www.star-history.com/#D-Sketon/hugo-theme-reimu&type=date&legend=top-left)
-
 ---
 
 ## 许可
