@@ -1,3 +1,16 @@
 baseURL: 'https://muvosl.github.io/moss-vein/'
 locale: 'zh-CN'
 title: 'vein'
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - Algolia
+
+outputFormats:
+  Algolia:
+    baseName: algolia
+    isPlainText: true
+    mediaType: application/json
+    notAlternative: true
