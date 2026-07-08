@@ -479,7 +479,7 @@ beaudar:
 algolia_search:
   enable: true
   appID: JD1L8Q7IF8
-  apiKey: 1f5ff0281dd1fb2bf3c9f0898b93bd
+  apiKey: d47e598524b1f0d0213768bbd2fdbbd1
   indexName: moss-vein
   hits:
     per_page: 10
