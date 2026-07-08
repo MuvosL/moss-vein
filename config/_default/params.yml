@@ -1,0 +1,193 @@
+########################################
+# Basic Configuration
+########################################
+
+# main menu navigation
+menu:
+  - name: home
+    url: ""
+  - name: archives
+    url: "archives"
+  - name: about
+    url: "about"
+  - name: friend
+    url: "friend"
+
+mainSections: ["post"]
+
+# 个人信息
+author: MuvosL
+email: ""
+description: "这是一片苔藓覆盖的知识脉络"
+
+# 站点 banner 和头像（把图片放到 static/ 目录下即可）
+banner: "images/banner.webp"
+avatar: "avatar.webp"
+
+# 文章目录
+toc: true
+
+# Footer
+footer:
+  since: 2026
+  powered: true
+  count: true
+  busuanzi: true
+  icon:
+    url: "../images/taichi.png"
+    rotate: true
+    mask: true
+
+# 侧边栏
+sidebar:
+  position: right
+  menu: true
+  article:
+    show_common: true
+
+# 社交链接（取消注释并填入你的链接）
+social:
+  github: https://github.com/MuvosL
+
+# 侧边栏小部件
+widgets:
+  - category
+  - tag
+  - tagcloud
+  - recent_posts
+
+# 显示文章更新时间
+show_update_time: false
+
+# RSS
+rss:
+  limit: 10
+  showFullContent: false
+  showCopyright: false
+
+# 分页
+paginate:
+  archive:
+  post:
+
+########################################
+# CSS / 外观
+########################################
+
+layout:
+  max_width: 1350px
+
+reimu_cursor:
+  enable: true
+
+# 深色模式: auto | true | false
+dark_mode:
+  enable: auto
+
+# 字体
+font:
+  enable: true
+  article:
+    - Mulish
+    - Noto Serif SC
+
+########################################
+# 代码块
+########################################
+
+code_block:
+  expand: true
+
+# 数学公式 (KaTeX)
+math:
+  katex:
+    enable: true
+
+########################################
+# 评论系统（默认全部关闭，需要时再开启）
+########################################
+
+comment:
+  default: waline
+
+waline:
+  enable: false
+  serverURL:
+
+########################################
+# 动画效果
+########################################
+
+preloader:
+  enable: true
+
+animation:
+  enable: true
+
+firework:
+  enable: true
+  disable_on_mobile: false
+
+pace:
+  enable: true
+
+########################################
+# 扩展功能
+########################################
+
+# 文章版权
+article_copyright:
+  enable: false
+
+# 回到顶部
+top:
+  enable: true
+  position: right
+
+# 过期提醒
+outdate:
+  enable: false
+  daysAgo: 180
+
+# 赞助
+sponsor:
+  enable: false
+
+# 分享
+share: []
+
+# 首页分类卡片
+home_categories:
+  enable: false
+
+########################################
+# 实验性功能
+########################################
+
+pjax:
+  enable: false
+
+quicklink:
+  enable: false
+
+service_worker:
+  enable: false
+
+live2d:
+  enable: false
+
+live2d_widgets:
+  enable: false
+
+player:
+  disable_on_mobile: false
+  aplayer:
+    enable: false
+  meting:
+    enable: false
+
+pangu:
+  enable: false
+
+material_theme:
+  enable: false
