@@ -704,6 +704,7 @@ player:
         - name: 爱错
           artist: 王力宏
           url: music/爱错-王力宏.mp3
+          cover: images/covers/cover1.jpg
   meting:
     # https://github.com/metowolf/MetingJS
     # if you want to use meting, please enable aplayer first
