@@ -412,7 +412,17 @@
       {{- range readDir $musicDir -}}
         {{- if and (strings.HasSuffix .Name ".mp3") (not (strings.HasPrefix .Name "README")) -}}
           {{- $fullname := strings.TrimSuffix ".mp3" .Name -}}
-          {{- $audioList = $audioList | append (dict "name" $fullname "artist" "" "url" (printf "music/%s" .Name) "cover" "images/covers/cover1.jpg") -}}
+          {{- /* 清理文件名中的 _数字 后缀 (如网易云ID) */ -}}
+          {{- $fullname = replaceRE `_\d+$` "" $fullname -}}
+          {{- /* 按 " - " 分隔符解析歌手和歌名 */ -}}
+          {{- if strings.Contains $fullname " - " -}}
+            {{- $parts := split $fullname " - " -}}
+            {{- $artist := trim (index $parts 0) " " -}}
+            {{- $name := trim (index $parts 1) " " -}}
+            {{- $audioList = $audioList | append (dict "name" $name "artist" $artist "url" (printf "music/%s" .Name) "cover" "images/covers/cover1.jpg") -}}
+          {{- else -}}
+            {{- $audioList = $audioList | append (dict "name" $fullname "url" (printf "music/%s" .Name) "cover" "images/covers/cover1.jpg") -}}
+          {{- end -}}
         {{- end -}}
       {{- end -}}
     {{- end -}}

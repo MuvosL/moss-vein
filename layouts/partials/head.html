@@ -24,7 +24,7 @@
 {{- else if .Title -}}
   {{- $title = printf "%s | %s" .Title .Site.Params.author -}}
 {{- else -}}
-  {{- $title = printf "%s | %s" .Title .Site.Params.author -}}
+  {{- $title = .Site.Params.author -}}
 {{- end -}}
 <title>
   {{ $title | safeHTML }}

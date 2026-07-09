@@ -2,15 +2,14 @@ window.throttle = (func: (...args: any[]) => void, limit: number) => {
   let lastFunc: number | undefined, lastRan: number;
 
   return (...args) => {
-    const context = this;
     if (!lastRan || Date.now() - lastRan >= limit) {
-      func.apply(context, args);
+      func.apply(null, args);
       lastRan = Date.now();
     } else {
       clearTimeout(lastFunc);
       lastFunc = setTimeout(
         () => {
-          func.apply(context, args);
+          func.apply(null, args);
           lastRan = Date.now();
         },
         limit - (Date.now() - lastRan),
