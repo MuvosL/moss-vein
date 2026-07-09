@@ -419,9 +419,9 @@
             {{- $parts := split $fullname " - " -}}
             {{- $artist := trim (index $parts 0) " " -}}
             {{- $name := trim (index $parts 1) " " -}}
-            {{- $audioList = $audioList | append (dict "name" $name "artist" $artist "url" (printf "music/%s" .Name) "cover" "images/covers/cover1.jpg") -}}
+            {{- $audioList = $audioList | append (dict "name" $name "artist" $artist "url" ((printf "music/%s" .Name) | relURL) "cover" ("images/covers/cover1.jpg" | relURL)) -}}
           {{- else -}}
-            {{- $audioList = $audioList | append (dict "name" $fullname "url" (printf "music/%s" .Name) "cover" "images/covers/cover1.jpg") -}}
+            {{- $audioList = $audioList | append (dict "name" $fullname "url" ((printf "music/%s" .Name) | relURL) "cover" ("images/covers/cover1.jpg" | relURL)) -}}
           {{- end -}}
         {{- end -}}
       {{- end -}}
@@ -446,7 +446,12 @@
             }
           }
         }
-        new APlayer({
+        {{- /* 销毁旧实例，避免 PJAX 导航后冲突 */ -}}
+        if (window.__aplayerInstance) {
+          try { window.__aplayerInstance.destroy(); } catch(e) {}
+          window.__aplayerInstance = null;
+        }
+        window.__aplayerInstance = new APlayer({
             theme: "var(--color-link)",
             container: document.getElementById('aplayer'),
             audio: JSON.parse({{ $audioList | jsonify }}) || [],
@@ -461,6 +466,10 @@
             lrcType: {{ $params.player.aplayer.options.lrcType }} || 0,
         });
       }
+    }
+    {{- /* 首次加载由 CDN onload 触发，PJAX 导航后自动重建 */ -}}
+    if (document.readyState !== 'loading' && window.__aplayerInstance) {
+      setupAPlayer();
     }
     </script>
   {{- else -}}
