@@ -34,23 +34,20 @@
     {{- end -}}
   </nav>
   {{- if and hugo.IsMultilingual (ne "404" .Type) -}}
-    {{- $i18nMap := dict -}}
-    {{- with .Rotate "language" -}}
-      {{- range . -}}
-        {{- $i18nMap = merge $i18nMap (dict .Lang .Site.Language.Label) -}}
-      {{- end -}}
+    {{- /* 构建所有语言的首页 URL 作为回退 */ -}}
+    {{- $homeTranslations := dict -}}
+    {{- range .Site.Home.AllTranslations -}}
+      {{- $homeTranslations = merge $homeTranslations (dict .Language.Lang .RelPermalink) -}}
     {{- end -}}
     <nav id="i18n-nav" aria-label="Language selection">
       <div class="custom-dropdown">
         <div class="select-selected" id="select-selected" role="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Language menu">
           <span id="nav-language-btn" class="nav-icon" style="padding: 0 20px 0 0"></span>
-          <span id="selected-lang">{{ index $i18nMap $.Language.Lang }}</span>
+          <span id="selected-lang">{{ $.Language.Label }}</span>
         </div>
         <ul class="select-items" id="select-items" role="listbox" aria-label="Languages">
-          {{- with .Rotate "language" -}}
-            {{- range . -}}
-              <li data-value="{{ .Lang }}" role="option" {{ if eq $.Language .Site.Language }}class="selected" aria-selected="true"{{ else }}aria-selected="false"{{ end }} >{{ .Site.Language.Label }}</li>
-            {{- end -}}
+          {{- range .Site.Home.AllTranslations -}}
+            <li data-value="{{ .Language.Lang }}" role="option" {{ if eq $.Language.Lang .Language.Lang }}class="selected" aria-selected="true"{{ else }}aria-selected="false"{{ end }}>{{ .Language.Label }}</li>
           {{- end -}}
         </ul>
       </div>
@@ -69,10 +66,17 @@
         selectOptions.forEach((item) => {
           item.addEventListener("click", () => {
             const langMap = {};
+            {{- /* 当前页面的翻译 */ -}}
             {{- with .Translations -}}
               {{- range . -}}
-              langMap['{{ .Language.Lang }}'] = '{{ .RelPermalink }}'; 
+              langMap['{{ .Language.Lang }}'] = '{{ .RelPermalink }}';
               {{- end -}}
+            {{- end -}}
+            {{- /* 当前语言本身 */ -}}
+            langMap['{{ $.Language.Lang }}'] = '{{ $.RelPermalink }}';
+            {{- /* 没有翻译的语言回退到首页 */ -}}
+            {{- range $lang, $url := $homeTranslations -}}
+            if (!langMap['{{ $lang }}']) langMap['{{ $lang }}'] = '{{ $url }}';
             {{- end -}}
             selectedLang.textContent = item.textContent;
             selectItems.classList.remove("show");
