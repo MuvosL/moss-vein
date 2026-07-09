@@ -466,7 +466,7 @@
             lrcType: {{ $params.player.aplayer.options.lrcType }} || 0,
         });
       }
-    }
+    };
     {{- /* 首次加载由 CDN onload 触发，PJAX 导航后自动重建 */ -}}
     if (document.readyState !== 'loading' && window.__aplayerInstance) {
       setupAPlayer();
