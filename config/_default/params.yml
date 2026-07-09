@@ -626,11 +626,8 @@ share:
 # show categories card on home page
 home_categories:
   enable: true
+  # content 留空则自动展示所有分类，手动指定则只展示指定的分类
   content:
-    - categories: 随笔
-      cover:
-    - categories: 测试
-      cover:
 
 ########################################
 # Experimental features
@@ -700,15 +697,9 @@ player:
       mutex: true
       listFolded: true
       lrcType: 0
-      audio:
-        - name: 爱错
-          artist: 王力宏
-          url: music/爱错-王力宏.mp3
-          cover: images/covers/cover1.jpg
-        - name: 如果你还没睡
-          artist: 贺俊雄
-          url: music/贺俊雄 - 如果你还没睡_576579446.mp3
-          cover: images/covers/cover1.jpg
+      audio: []
+# 音乐文件请直接放入 static/music/ 目录，构建时自动发现
+# 文件名即为播放器显示名称，建议格式: 歌手 - 歌名.mp3
   meting:
     # https://github.com/metowolf/MetingJS
     # if you want to use meting, please enable aplayer first

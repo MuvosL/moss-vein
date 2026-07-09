@@ -12,8 +12,15 @@
   {{- end -}}
   {{- $sort_config := .Site.Params.sort_order.home -}}
   {{- if and (eq 1 $paginator.PageNumber) ($ctx.Site.Params.home_categories.enable) -}}
+    {{- $homeCats := $ctx.Site.Params.home_categories.content -}}
+    {{- if not $homeCats -}}
+      {{- $homeCats = slice -}}
+      {{- range $cat, $taxonomy := $ctx.Site.Taxonomies.categories -}}
+        {{- $homeCats = $homeCats | append (dict "categories" $cat "cover" "") -}}
+      {{- end -}}
+    {{- end -}}
     <div class="post-categories-wrapper" data-aos="{{ $ctx.Site.Params.animation.options.home.post }}">
-      {{- range $k, $v := $ctx.Site.Params.home_categories.content -}}
+      {{- range $k, $v := $homeCats -}}
         {{- if $v.categories -}}
           <div class="post-categories-wrap">
             <a class="post-link" href="{{ (printf "%s%s" "categories/" (urlize $v.categories)) | relLangURL }}" aria-label="{{ $v.categories }}" title="{{ $v.categories }}"></a>

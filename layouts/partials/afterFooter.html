@@ -407,8 +407,19 @@
 {{- if $params.player.aplayer.enable -}}
   {{- if not $params.player.meting.enable -}}
     {{- $audioList := slice -}}
-    {{- range $params.player.aplayer.options.audio -}}
-      {{- $audioList = $audioList | append (merge . (dict "url" (.url | relURL))) -}}
+    {{- $musicDir := "static/music" -}}
+    {{- if fileExists $musicDir -}}
+      {{- range readDir $musicDir -}}
+        {{- if and (strings.HasSuffix .Name ".mp3") (not (strings.HasPrefix .Name "README")) -}}
+          {{- $fullname := strings.TrimSuffix ".mp3" .Name -}}
+          {{- $audioList = $audioList | append (dict "name" $fullname "artist" "" "url" (printf "music/%s" .Name) "cover" "images/covers/cover1.jpg") -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+    {{- if eq (len $audioList) 0 -}}
+      {{- range $params.player.aplayer.options.audio -}}
+        {{- $audioList = $audioList | append (merge . (dict "url" (.url | relURL))) -}}
+      {{- end -}}
     {{- end -}}
     <script>
     var setupAPlayer = () => {
