@@ -475,10 +475,14 @@
         if (savedSong !== null) {
           try {
             window.__aplayerInstance.list.switch(savedSong);
-            window.__aplayerInstance.audio.currentTime = savedTime;
-            if (wasPlaying) {
-              window.__aplayerInstance.play();
-            }
+            var onReady = function() {
+              window.__aplayerInstance.audio.removeEventListener('canplay', onReady);
+              window.__aplayerInstance.audio.currentTime = savedTime;
+              if (wasPlaying) {
+                window.__aplayerInstance.play();
+              }
+            };
+            window.__aplayerInstance.audio.addEventListener('canplay', onReady);
           } catch(e) {}
         }
       }
