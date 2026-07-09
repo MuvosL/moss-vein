@@ -5,7 +5,7 @@
 # image:  头像图片链接（支持外链或本地路径如 /images/xxx.jpg）
 # 以下为示例，请替换为你自己的好友
 
-# - name: 好友1
-#   url: https://example.com/
-#   desc: 一段描述
-#   image: https://example.com/avatar.jpg
+ - name: BobcGn
+   url: https://bobcgn.github.io/quartz-myblogs/
+   desc: 一个纯粹的技术爱好者
+   image: https://avatars.githubusercontent.com/u/221724126?v=4
