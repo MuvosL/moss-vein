@@ -40,6 +40,7 @@ jobs:
         run: hugo --minify
 
       - name: Upload index to Algolia
+        continue-on-error: true
         env:
           ALGOLIA_APP_ID: JD1L8Q7IF8
           ALGOLIA_WRITE_KEY: ${{ secrets.ALGOLIA_WRITE_KEY }}
