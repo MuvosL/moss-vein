@@ -116,7 +116,7 @@
           title: "{{ .Title }}",
           url: "{{ .Permalink }}",
           description: "{{ $desc }}",
-          cover: {{ if and .Params.cover (not (strings.HasPrefix .Params.cover "rgb")) }}"{{ .Params.cover | absURL }}"{{ else }}"{{ .Site.Params.banner | absURL }}"{{ end }},
+          cover: {{ if and .Params.cover (not (strings.HasPrefix .Params.cover "rgb")) }}"{{ partial "helpers/coverUrl.html" (dict "page" . "cover" .Params.cover "absolute" true) }}"{{ else }}"{{ .Site.Params.banner | absURL }}"{{ end }},
         };
       </script>
     {{- end -}}

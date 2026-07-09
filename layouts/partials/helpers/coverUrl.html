@@ -1,0 +1,25 @@
+{{- $page := .page -}}
+{{- $cover := .cover -}}
+{{- $absolute := .absolute | default false -}}
+
+{{- /* 空值、纯色、外部链接直接返回原值 */ -}}
+{{- if or (not $cover) (eq $cover false) (strings.HasPrefix $cover "rgb") (strings.HasPrefix $cover "http") (strings.HasPrefix $cover "//") -}}
+  {{- $cover -}}
+{{- else -}}
+  {{- /* 优先作为页面资源查找（页面包内相对路径） */ -}}
+  {{- $resource := $page.Resources.Get $cover -}}
+  {{- if $resource -}}
+    {{- if $absolute -}}
+      {{- $resource.Permalink -}}
+    {{- else -}}
+      {{- $resource.RelPermalink -}}
+    {{- end -}}
+  {{- else -}}
+    {{- /* 回退到 static/ 静态文件路径 */ -}}
+    {{- if $absolute -}}
+      {{- $cover | absURL -}}
+    {{- else -}}
+      {{- $cover | relURL -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}

@@ -41,9 +41,9 @@
         post-cover left
       {{ end }}"
     >
-      {{- if and $page.Params.cover (not (hasPrefix $page.Params.cover "rgb")) -}}
+      {{- if and $page.Params.cover (not (strings.HasPrefix $page.Params.cover "rgb")) -}}
         <img
-          data-src="{{ $page.Params.cover | relURL }}"
+          data-src="{{ partial "helpers/coverUrl.html" (dict "page" $page "cover" $page.Params.cover) }}"
           data-sizes="auto"
           alt="{{ .Title }}"
           class="lazyload"

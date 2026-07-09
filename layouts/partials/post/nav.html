@@ -8,7 +8,7 @@
       <div class="article-nav-link-wrap left">
         {{- if and .PrevInSection.Params.cover (not (strings.HasPrefix .PrevInSection.Params.cover "rgb")) -}}
           <img
-            data-src="{{ .PrevInSection.Params.cover | relURL }}"
+            data-src="{{ partial "helpers/coverUrl.html" (dict "page" .PrevInSection "cover" .PrevInSection.Params.cover) }}"
             data-sizes="auto"
             alt="{{ .PrevInSection.Title }}"
             class="lazyload"
@@ -59,7 +59,7 @@
       <div class="article-nav-link-wrap right">
         {{- if and .NextInSection.Params.cover (not (strings.HasPrefix .NextInSection.Params.cover "rgb")) -}}
           <img
-            data-src="{{ .NextInSection.Params.cover | relURL }}"
+            data-src="{{ partial "helpers/coverUrl.html" (dict "page" .NextInSection "cover" .NextInSection.Params.cover) }}"
             data-sizes="auto"
             alt="{{ .NextInSection.Title }}"
             class="lazyload"

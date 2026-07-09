@@ -120,7 +120,7 @@
     <img style="position: absolute;top: 0;left: 0;width: 100%;height: 180%;z-index: -2;display: block;background: {{ $headerImage | safeCSS }};mask: linear-gradient(to top, transparent, #fff 50%);"></img>
   {{- else if $headerImage -}}
     <picture></picture>
-    <img {{ if .Site.Params.material_theme.enable }}crossorigin="anonymous"{{ end }} fetchpriority="high" src="{{ $headerImage | relURL }}" alt="{{ .Title }}">
+    <img {{ if .Site.Params.material_theme.enable }}crossorigin="anonymous"{{ end }} fetchpriority="high" src="{{ partial "helpers/coverUrl.html" (dict "page" . "cover" $headerImage) }}" alt="{{ .Title }}">
   {{- else if or (eq .Params.banner false) (eq .Params.cover false) -}}
     <picture></picture>
     <img style="visibility:hidden"></img>

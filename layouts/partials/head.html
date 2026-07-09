@@ -78,7 +78,7 @@
   {{- $openGraphOptions := .Site.Params.open_graph.options -}}
   {{- $ogImage := "" -}}
   {{- if and .Params.cover (not (strings.HasPrefix .Params.cover "rgb")) -}}
-    {{- $ogImage = .Params.cover | absURL -}}
+    {{- $ogImage = partial "helpers/coverUrl.html" (dict "page" . "cover" .Params.cover "absolute" true) -}}
   {{- else if and .Params.banner (not (strings.HasPrefix .Params.banner "rgb")) -}}
     {{- $ogImage = .Params.banner | absURL -}}
   {{- else -}}
