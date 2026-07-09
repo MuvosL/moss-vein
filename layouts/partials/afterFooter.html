@@ -446,8 +446,14 @@
             }
           }
         }
-        {{- /* 销毁旧实例，避免 PJAX 导航后冲突 */ -}}
+        {{- /* 保存当前播放状态，PJAX 导航后恢复 */ -}}
+        var savedSong = null;
+        var savedTime = 0;
+        var wasPlaying = false;
         if (window.__aplayerInstance) {
+          savedSong = window.__aplayerInstance.list.index;
+          savedTime = window.__aplayerInstance.audio.currentTime;
+          wasPlaying = !window.__aplayerInstance.audio.paused;
           try { window.__aplayerInstance.destroy(); } catch(e) {}
           window.__aplayerInstance = null;
         }
@@ -465,6 +471,16 @@
             listFolded: {{ $params.player.aplayer.options.listFolded }} || false,
             lrcType: {{ $params.player.aplayer.options.lrcType }} || 0,
         });
+        {{- /* 恢复播放状态 */ -}}
+        if (savedSong !== null) {
+          try {
+            window.__aplayerInstance.list.switch(savedSong);
+            window.__aplayerInstance.audio.currentTime = savedTime;
+            if (wasPlaying) {
+              window.__aplayerInstance.play();
+            }
+          } catch(e) {}
+        }
       }
     };
     {{- /* 首次加载由 CDN onload 触发，PJAX 导航后自动重建 */ -}}
