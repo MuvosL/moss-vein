@@ -705,6 +705,10 @@ player:
           artist: 王力宏
           url: music/爱错-王力宏.mp3
           cover: images/covers/cover1.jpg
+        - name: 如果你还没睡
+          artist: 贺俊雄
+          url: music/贺俊雄 - 如果你还没睡_576579446.mp3
+          cover: images/covers/cover1.jpg
   meting:
     # https://github.com/metowolf/MetingJS
     # if you want to use meting, please enable aplayer first
