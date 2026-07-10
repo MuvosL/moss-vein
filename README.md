@@ -22,7 +22,7 @@
   </a>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://obsidian.md/">
-    <img src="https://raw.githubusercontent.com/obsidianmd/obsidian-docs/master/static/img/obsidian.svg" alt="Obsidian" height="60">
+    <img src="https://i-blog.csdnimg.cn/direct/817a517dfe9a44c68e73be52e4cfd24d.png?x-oss-process=image/resize,m_fixed,h_224,w_224" alt="Obsidian" height="60">
   </a>
 </div>
 
