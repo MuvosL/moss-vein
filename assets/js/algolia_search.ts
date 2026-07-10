@@ -131,6 +131,14 @@ const algoliaHandler = () => {
     window.__pjaxInstance?.refresh();
   });
 
+  // close popup when a search result link is clicked
+  _$("#reimu-hits")?.addEventListener("click", (e) => {
+    const target = (e.target as HTMLElement).closest("a");
+    if (target) {
+      (_$(".popup") as any).__closePopup?.();
+    }
+  });
+
   _$(".popup-trigger")
     ?.off("click")
     .on("click", (event) => {
