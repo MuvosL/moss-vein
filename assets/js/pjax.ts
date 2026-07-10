@@ -209,6 +209,10 @@ window.addEventListener("pjax:complete", () => {
     window.walineInstance.destroy();
     window.walineInstance = null;
   }
+  // re-init APlayer after PJAX navigation
+  if (window.setupAPlayer) {
+    window.setupAPlayer();
+  }
 });
 window.addEventListener("pjax:send", () => {
   // destroy panZoom
