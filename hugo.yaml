@@ -6,6 +6,11 @@ hasCJKLanguage: true
 permalinks:
   post: /post/:slug/
 
+ignoreFiles:
+  - '\.obsidian'
+  - '\.trash'
+  - 'moss_model'
+
 outputs:
   home:
     - HTML
