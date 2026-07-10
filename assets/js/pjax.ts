@@ -113,7 +113,7 @@ if (window.Pjax) {
   };
 }
 window.Pjax &&
-  new window.Pjax({
+  (window.__pjaxInstance = new window.Pjax({
     selectors: [
       "#header>img",
       "#header>picture",
@@ -156,7 +156,7 @@ window.Pjax &&
       },
     },
     cacheBust: false,
-  });
+  }));
 
 window.addEventListener("pjax:success", () => {
   _$$("script[data-pjax]").forEach((element) => {
@@ -208,10 +208,6 @@ window.addEventListener("pjax:complete", () => {
   if (window.walineInstance) {
     window.walineInstance.destroy();
     window.walineInstance = null;
-  }
-  // re-init APlayer after PJAX navigation
-  if (window.setupAPlayer) {
-    window.setupAPlayer();
   }
 });
 window.addEventListener("pjax:send", () => {

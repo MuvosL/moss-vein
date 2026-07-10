@@ -127,6 +127,10 @@ const algoliaHandler = () => {
 
   search.start();
 
+  search.on("render", () => {
+    window.__pjaxInstance?.refresh();
+  });
+
   _$(".popup-trigger")
     ?.off("click")
     .on("click", (event) => {

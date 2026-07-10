@@ -98,6 +98,9 @@ declare global {
   var walineInstance: any;
   var ClipboardJS: any;
   var Pjax: any;
+  var __pjaxInstance: any;
+  var setupAPlayer: (() => void) | undefined;
+  var __aplayerInstance: any;
   var QRCode: any;
   var snapdom: any;
   var materialTheme: any;
