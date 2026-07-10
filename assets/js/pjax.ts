@@ -216,6 +216,11 @@ window.addEventListener("pjax:send", () => {
     window.__panZoomList.forEach((panZoom) => panZoom.destroy());
     window.__panZoomList = [];
   }
+  // close search popup if open
+  const popup = _$(".popup");
+  if (popup?.classList.contains("show")) {
+    (popup as any).__closePopup?.();
+  }
 });
 if (window.startLoading) window.addEventListener("pjax:send", startLoading!);
 if (window.endLoading) window.addEventListener("pjax:complete", endLoading!);
