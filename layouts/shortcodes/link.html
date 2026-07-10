@@ -36,6 +36,7 @@
 		{{- $excerpt = $page.RawContent | truncate 100 -}}
 	{{- end -}}
 {{- end -}}
+{{- $excerpt = $excerpt | replaceRE `!\[\[([^\]]+)\]\]` "" -}}
 
 {{- $displayTitle := $title -}}
 {{- if not $escape -}}

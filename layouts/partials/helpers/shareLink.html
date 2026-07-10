@@ -9,6 +9,7 @@
 {{- else -}}
   {{- $desc = .RawContent | truncate 300 -}}
 {{- end -}}
+{{- $desc = $desc | replaceRE `!\[\[([^\]]+)\]\]` "" -}}
 
 {{- $shareMap := dict
   "weibo" (printf "https://service.weibo.com/share/share.php?url=%s&appkey=&title=%s&pic=&ralateUid=" $url $title)

@@ -44,7 +44,14 @@
           >
         </p>
       {{- else -}}
-        {{ .Content | safeHTML }}
+        {{ $content := .RawContent }}
+        {{ range findRESubmatch `!\[\[([^\]]+)\]\]` .RawContent }}
+          {{ $img := $.Page.Resources.GetMatch (printf "**/%s" (index . 1)) }}
+          {{ if $img }}
+            {{ $content = replace $content (index . 0) (printf `![image](%s)` $img.RelPermalink) }}
+          {{ end }}
+        {{ end }}
+        {{ $content | $.Page.RenderString }}
       {{- end -}}
     </div>
     <footer class="article-footer">

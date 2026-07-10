@@ -3,6 +3,9 @@ title: 'vein'
 locale: 'zh-CN'
 hasCJKLanguage: true
 
+permalinks:
+  post: /post/:slug/
+
 outputs:
   home:
     - HTML

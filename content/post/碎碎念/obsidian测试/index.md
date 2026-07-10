@@ -3,7 +3,7 @@ title: obsidian测试
 description: ""
 date: 2026-07-11T03:10:27+08:00
 lastmod: 2026-07-11T03:10:27+08:00
-draft: true
+draft: false
 slug: MuvosL-2026-003
 categories:
   - 随笔

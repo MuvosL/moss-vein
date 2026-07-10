@@ -41,13 +41,15 @@
         {{ $displayTitle }}
       </div>
       <div class="post-link-card-excerpt">
+        {{- $excerpt := "" -}}
         {{- if $page.Params.description -}}
-          {{- $page.Params.description | plainify | truncate 100 -}}
+          {{- $excerpt = $page.Params.description | plainify | truncate 100 -}}
         {{- else if $page.Summary -}}
-          {{- $page.Summary | plainify | truncate 100 -}}
+          {{- $excerpt = $page.Summary | plainify | truncate 100 -}}
         {{- else -}}
-          {{- $page.RawContent | truncate 100 -}}
+          {{- $excerpt = $page.RawContent | truncate 100 -}}
         {{- end -}}
+        {{- $excerpt | replaceRE `!\[\[([^\]]+)\]\]` "" -}}
       </div>
     </div>
   </div>

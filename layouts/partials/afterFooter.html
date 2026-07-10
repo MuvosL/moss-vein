@@ -110,6 +110,7 @@
       {{- else -}}
         {{- $desc = .RawContent | truncate 300 -}}
       {{- end -}}
+      {{- $desc = $desc | replaceRE `!\[\[([^\]]+)\]\]` "" -}}
       <script data-pjax>
         window.REIMU_POST = {
           author: "{{ .Params.author | default $params.author }}",

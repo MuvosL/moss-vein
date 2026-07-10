@@ -5,7 +5,7 @@
         class="article-summary"
         data-aos="{{- .Site.Params.animation.options.article.tag -}}"
       >
-        <p>{{- .Summary | plainify | truncate 200 -}}</p>
+        <p>{{- .Summary | plainify | replaceRE `!\[\[([^\]]+)\]\]` "" | truncate 200 -}}</p>
       </blockquote>
     </div>
   {{- end -}}

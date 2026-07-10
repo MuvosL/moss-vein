@@ -68,7 +68,7 @@
         {{ if $showFullContent }}
           {{ .Content | safeHTML }}
         {{ else }}
-          {{ .Summary | safeHTML }}
+          {{ .Summary | replaceRE `!\[\[([^\]]+)\]\]` "" | safeHTML }}
         {{ end }}
         {{ $articleFooter | safeHTML }}
       </description>

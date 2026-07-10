@@ -7,9 +7,9 @@
     "permalink": "{{ .Permalink | relURL }}",
     "title": {{ .Title | jsonify }},
     {{- if gt .WordCount $limit -}}
-    "content": {{ .Plain | truncate $limit | jsonify | safeJS }},
+    "content": {{ .Plain | replaceRE `!\[\[([^\]]+)\]\]` "" | truncate $limit | jsonify | safeJS }},
     {{- else -}}
-    "content": {{ .Plain | jsonify | safeJS }},
+    "content": {{ .Plain | replaceRE `!\[\[([^\]]+)\]\]` "" | jsonify | safeJS }},
     {{- end -}}
     "date": {{ .Date.Format $.Site.Params.timeFormat | jsonify }},
     "updated": {{ .Lastmod.Format $.Site.Params.timeFormat | jsonify }}
