@@ -2,6 +2,7 @@ baseURL: 'https://muvosl.github.io/moss-vein/'
 title: 'vein'
 locale: 'zh-CN'
 hasCJKLanguage: true
+enableGitInfo: true
 
 permalinks:
   post: /post/:slug/

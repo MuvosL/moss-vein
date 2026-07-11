@@ -1,0 +1,9 @@
+/* 隐藏 moss_model 文件夹 */
+.nav-folder-title[data-path="moss_model"] {
+  display: none !important;
+}
+
+/* 隐藏 _index.md 文件 */
+.nav-file-title[data-path="_index.md"] {
+  display: none !important;
+}

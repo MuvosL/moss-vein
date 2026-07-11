@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "7219098dc5e2edde",
+        "id": "64d54b133b18bfa4",
         "type": "tabs",
         "children": [
           {
-            "id": "86e9e2866d7f5462",
+            "id": "e02c96d70c38b83a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "碎碎念/obsidian测试/index.md",
+                "file": "碎碎念/序言/index.md",
                 "mode": "source",
                 "source": false
               },
@@ -94,8 +94,8 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "欢迎.md",
-                "collapseAll": false,
+                "file": "碎碎念/序言/index.md",
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "欢迎 的反向链接列表"
+              "title": "index 的反向链接列表"
             }
           },
           {
@@ -156,56 +156,73 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "欢迎.md",
+                "file": "碎碎念/序言/index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "欢迎 的大纲"
+              "title": "index 的大纲"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-git:Open Git source control": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "bases:新建数据库": false
+      "bases:新建数据库": false,
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "86e9e2866d7f5462",
+  "active": "bc34185c78666804",
   "lastOpenFiles": [
-    "moss_model/moss_model.md",
-    "_index.md",
-    "碎碎念/序言.md",
-    "碎碎念/obsidian测试.md",
     "碎碎念/序言/index.md",
-    "碎碎念/序言",
-    "碎碎念/obsidian测试/images/Pasted image 20260711031146.png",
-    "碎碎念/obsidian测试/images",
+    "moss_model/new-post.js.tmp.17048.1b75847c7c53",
+    "moss_model/new-post.js.tmp.17048.496fbec6930d",
+    "moss_model/new-post.js.tmp.17048.0ec8e5a6c9d7",
+    "碎碎念/ckjsck/index.md",
+    "的声波传播/ocdbsob/index.md",
+    "的声波传播/ocdbsob",
+    "的声波传播",
+    "moss_model/new-post.js.tmp.17048.570d8c291c50",
+    "moss_model/new-post.js.tmp.17048.07a3e9b54133",
+    "新",
+    "碎碎念/ckjsck",
+    "moss_model/new-post.js.tmp.17048.066827457a80",
+    "我的新的/test/index.md",
+    "碎碎念/青藤/index.md",
+    "玄机靶场/青藤篇/index.md",
+    "碎碎念/青藤篇/index.md",
+    "博客/我的/index.md",
+    "碎碎念/测试/index.md",
+    "碎碎念/我的/index.md",
+    "碎碎念/tttt.md",
+    "碎碎念/test/tets.md",
+    "碎碎念/test/index.md",
+    "碎碎念/测试时.md",
+    "碎碎念/你的.md",
+    "碎碎念/测试.md",
+    "碎碎念/测.md",
+    "碎碎念/我的.md",
+    "玄机靶场/test.md",
+    "玄机靶场/index.md",
+    "_index.md",
+    "玄机靶场/未命名/未命名.md",
     "碎碎念/obsidian测试/index.md",
-    "碎碎念/obsidian测试",
-    "碎碎念/images/Pasted image 20260711031146.png",
-    "碎碎念/images",
-    "玄机靶场/未命名.md",
-    "玄机靶场",
-    "moss_model/moss_model.md.tmp.45308.38b43500741f",
-    "moss_model/moss_model.md.tmp.45308.e5721dc2932c",
-    "moss_model",
-    "模板.md.tmp.36540.71b400129aea",
-    "test-post/index.md",
-    "test-post",
-    "test/test.md",
-    "欢迎.md"
+    "玄机靶场/未命名/index.md",
+    "碎碎念/obsidian测试/index1.md",
+    "碎碎念/obsidian测试/images/Pasted image 20260711031146.png",
+    "碎碎念/images/Pasted image 20260711031146.png"
   ]
 }
