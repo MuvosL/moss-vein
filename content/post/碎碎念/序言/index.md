@@ -3,7 +3,7 @@ title: 序言
 description: ""
 date: 2026-07-11T17:59:58+08:00
 lastmod: 2026-07-11T18:13:52+08:00
-draft: true
+draft: false
 slug: MuvosL-2026-001
 categories:
   - 碎碎念
