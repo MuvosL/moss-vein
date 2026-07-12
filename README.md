@@ -40,7 +40,7 @@
 git clone https://github.com/MuvosL/moss-vein.git
 cd moss-vein
 # 用 Obsidian 打开 content/post/ 目录作为仓库
-# Ctrl+Shift+X 一键新建文章，写完 Ctrl+Shift+P 推送
+# Ctrl+Shift+X 一键新建文章，写完 Ctrl+Shift+A 推送
 ```
 
 就这么简单。GitHub Actions 会自动构建并部署到 GitHub Pages。
@@ -68,13 +68,13 @@ cd moss-vein
 ### 写好即推送
 
 **Obsidian Git** 插件提供了完整的 Git 操作面板和快捷键：
-- `Ctrl+Shift+P` —— 一键 Commit-and-sync（提交并推送）
+- `Ctrl+Shift+A` —— 一键 Commit-and-sync（提交并推送）
 - 支持 Stage / Unstage 当前文件、查看 Diff、切换分支等
 - 侧边栏直接查看变更文件列表，所见即所得
 
 ### 图片粘贴即用
 
-在 Obsidian 中直接粘贴截图，图片会自动存入 `images/` 子目录。写作时用 `![[图片名]]` 语法引用，Hugo 构建时自动转换为标准 `<img>` 标签，无需手动管理路径。
+在 Obsidian 中直接粘贴截图，图片会自动存入 `images/` 子目录。写作时用 `![[图片名]]` 语法引用，Hugo 构建时自动转换为标准 `<img>` 标签，无需手动管理路径。此处本身并没有，为方便个人使用，在其构建前对文章内容做自动批处理
 
 ### 面板布局
 
