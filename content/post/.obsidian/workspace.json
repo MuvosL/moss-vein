@@ -20,8 +20,23 @@
               "icon": "lucide-file",
               "title": "index"
             }
+          },
+          {
+            "id": "6af335ef5c55dd23",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "打靶/第一章 应急响应-Linux日志分析/index.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "index"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -78,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "75ea0d44d267dc00",
@@ -156,7 +172,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "碎碎念/序言/index.md",
+                "file": "打靶/第一章 应急响应-Linux日志分析/index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -185,22 +201,29 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "e02c96d70c38b83a",
+  "active": "6af335ef5c55dd23",
   "lastOpenFiles": [
-    "碎碎念/序言/index.md.tmp.44852.c99595b30692",
+    "打靶/第一章 应急响应-Linux日志分析/index.md.tmp.25256.8d5b820d9893",
+    "打靶/第一章 应急响应-Linux日志分析/index.md.tmp.25256.ebc79f4b21c6",
+    "打靶/第一章 应急响应-Linux日志分析/index.md.tmp.25256.aa25352695d5",
+    "打靶/第一章 应急响应-Linux日志分析/index.md.tmp.25256.d39ae43e9f94",
+    "打靶/第一章 应急响应-Linux日志分析/index.md.tmp.25256.8ac0dd789c5f",
+    "打靶/第一章 应急响应-Linux日志分析/index.md.tmp.25256.2104a7f9d474",
+    "打靶/第一章 应急响应-Linux日志分析/images/Pasted image 20260712142310.png",
+    "打靶/第一章 应急响应-Linux日志分析/images/Pasted image 20260712142220.png",
+    "打靶/第一章 应急响应-Linux日志分析/images/Pasted image 20260712141858.png",
+    "打靶/第一章 应急响应-Linux日志分析/images/Pasted image 20260712141538.png",
+    "打靶/第一章 应急响应-Linux日志分析/images/Pasted image 20260712141108.png",
+    "打靶/第一章 应急响应-Linux日志分析/images/Pasted image 20260712135250.png",
+    "打靶/第一章 应急响应-Linux日志分析/images",
     "碎碎念/序言/index.md",
+    "打靶/第一章 应急响应-Linux日志分析/index.md",
+    "打靶/第一章 应急响应-Linux日志分析",
+    "打靶",
+    "碎碎念/序言/index.md.tmp.44852.c99595b30692",
     "moss_model/new-post.js.tmp.17048.1b75847c7c53",
-    "moss_model/new-post.js.tmp.17048.496fbec6930d",
-    "moss_model/new-post.js.tmp.17048.0ec8e5a6c9d7",
     "碎碎念/ckjsck/index.md",
     "的声波传播/ocdbsob/index.md",
-    "的声波传播/ocdbsob",
-    "的声波传播",
-    "moss_model/new-post.js.tmp.17048.570d8c291c50",
-    "moss_model/new-post.js.tmp.17048.07a3e9b54133",
-    "新",
-    "碎碎念/ckjsck",
-    "moss_model/new-post.js.tmp.17048.066827457a80",
     "我的新的/test/index.md",
     "碎碎念/青藤/index.md",
     "玄机靶场/青藤篇/index.md",
@@ -222,7 +245,6 @@
     "玄机靶场/未命名/未命名.md",
     "碎碎念/obsidian测试/index.md",
     "玄机靶场/未命名/index.md",
-    "碎碎念/obsidian测试/index1.md",
     "碎碎念/obsidian测试/images/Pasted image 20260711031146.png",
     "碎碎念/images/Pasted image 20260711031146.png"
   ]
