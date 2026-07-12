@@ -24,3 +24,7 @@ outputFormats:
     isPlainText: true
     mediaType: application/json
     notAlternative: true
+
+markup:
+  highlight:
+    noClasses: false
