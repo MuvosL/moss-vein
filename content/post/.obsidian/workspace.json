@@ -244,14 +244,25 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8dd29e5ae75a1a5b",
+  "active": "a88ea75d73cf6581",
   "lastOpenFiles": [
-    "AI“应用”/AI 安全攻防实战全景：从红队演练到智能体时代的防御重建/index.md",
+    "AI“应用”/AI安全攻防实战全景/images/Pasted image 20260802131941.png",
+    "images/A_professional_reference_card__2026-07-31T13-54-31.png",
+    "images/A_professional_security_diagra_2026-07-31T13-54-02.png",
     "AI“应用”/AI安全攻防实战全景/index.md",
+    "AI“应用”/AI安全攻防实战全景/images/Pasted image 20260802131909.png",
     "AI“应用”/ai概念浅知/index.md",
+    "AI“应用”/AI安全攻防实战全景/images/Pasted image 20260802131843.png",
+    "images/A_professional_layered_archite_2026-07-31T13-53-33.png",
+    "AI“应用”/AI安全攻防实战全景/images/Pasted image 20260802131818.png",
+    "images/A_professional_horizontal_time_2026-07-31T13-53-05.png",
+    "AI“应用”/AI安全攻防实战全景/images/Pasted image 20260802131757.png",
+    "AI“应用”/AI安全攻防实战全景/images",
+    "images/A_professional_infographic_min_2026-07-31T13-52-33.png",
+    "AI“应用”/AI 安全攻防实战全景：从红队演练到智能体时代的防御重建/index.md",
     "AI“应用”/AI安全攻防实战全景",
     "打靶/Webgoat/index.md",
-    "AI“应用”/AI安全攻防实战全景/images",
+    "images",
     "打靶/第一章 应急响应-Linux日志分析/index.md",
     "AI“应用”/ai概念浅知",
     "AI“应用”",
@@ -260,13 +271,7 @@
     "打靶/第一章 应急响应-Linux日志分析/index.md.tmp.25256.ebc79f4b21c6",
     "打靶/第一章 应急响应-Linux日志分析/index.md.tmp.25256.aa25352695d5",
     "打靶/第一章 应急响应-Linux日志分析/index.md.tmp.25256.d39ae43e9f94",
-    "打靶/第一章 应急响应-Linux日志分析/index.md.tmp.25256.8ac0dd789c5f",
     "打靶/第一章 应急响应-Linux日志分析/images/Pasted image 20260712142310.png",
-    "打靶/第一章 应急响应-Linux日志分析/images/Pasted image 20260712142220.png",
-    "打靶/第一章 应急响应-Linux日志分析/images/Pasted image 20260712141858.png",
-    "打靶/第一章 应急响应-Linux日志分析/images/Pasted image 20260712141538.png",
-    "打靶/第一章 应急响应-Linux日志分析/images/Pasted image 20260712141108.png",
-    "打靶/第一章 应急响应-Linux日志分析/images/Pasted image 20260712135250.png",
     "碎碎念/序言/index.md",
     "碎碎念/ckjsck/index.md",
     "的声波传播/ocdbsob/index.md",
@@ -286,9 +291,6 @@
     "碎碎念/测.md",
     "碎碎念/我的.md",
     "玄机靶场/test.md",
-    "玄机靶场/index.md",
-    "_index.md",
-    "碎碎念/obsidian测试/images/Pasted image 20260711031146.png",
-    "碎碎念/images/Pasted image 20260711031146.png"
+    "玄机靶场/index.md"
   ]
 }
