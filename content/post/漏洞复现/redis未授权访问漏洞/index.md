@@ -2,7 +2,7 @@
 title: redis未授权访问漏洞
 description: ""
 date: 2026-08-19T15:18:09+08:00
-lastmod: 2026-08-19T15:18:23+08:00
+lastmod: 2026-08-19T15:18:38+08:00
 draft: false
 slug: MuvosL-2026-008
 categories:

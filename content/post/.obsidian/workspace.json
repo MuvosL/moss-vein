@@ -97,7 +97,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "漏洞复现/redis未授权访问漏洞/index.md",
+                "file": "漏洞复现/hutool_RCE【CVE-2025-56769】/index.md",
                 "mode": "source",
                 "source": false
               },
@@ -243,7 +243,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "漏洞复现/redis未授权访问漏洞/index.md",
+                "file": "漏洞复现/hutool_RCE【CVE-2025-56769】/index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -272,17 +272,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8dd29e5ae75a1a5b",
+  "active": "1c9bdac77253f3c3",
   "lastOpenFiles": [
-    "漏洞复现12/redis未授权访问漏洞/redis未授权访问漏洞.md",
+    "漏洞复现/React&RSC&Next.js 服务器组件漏洞/index.md",
     "漏洞复现/redis未授权访问漏洞/index.md",
+    "漏洞复现12/redis未授权访问漏洞/redis未授权访问漏洞.md",
     "漏洞复现/redis未授权访问漏洞",
     "漏洞复现12/redis未授权访问漏洞/redis未授权访问漏洞.pdf",
     "漏洞复现/hutool_RCE【CVE-2025-56769】/index.md",
     "漏洞复现12/log4j/log4j.md",
     "漏洞复现12/huotool_RCE/hutool_RCE【CVE-2025-56769】.md",
     "漏洞复现/hutool_RCE【CVE-2025-56769】",
-    "漏洞复现/React&RSC&Next.js 服务器组件漏洞/index.md",
     "漏洞复现/React&RSC&Next.js 服务器组件漏洞/React&RSC&Next.js 服务器组件漏洞.md",
     "漏洞复现12/永恒之黑/永恒之黑CVE-2020-0796.md",
     "漏洞复现12/永恒之黑/images/image-20251025220604188.png",
