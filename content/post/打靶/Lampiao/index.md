@@ -2,7 +2,7 @@
 title: Lampiao
 description: ""
 date: 2026-08-19T15:20:46+08:00
-lastmod: 2026-08-19T15:22:31+08:00
+lastmod: 2026-08-19T15:23:43+08:00
 draft: false
 slug: MuvosL-2026-009
 categories:

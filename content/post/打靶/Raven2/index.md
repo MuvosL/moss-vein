@@ -2,7 +2,7 @@
 title: Raven2
 description: ""
 date: 2026-08-19T15:21:34+08:00
-lastmod: 2026-08-19T15:22:28+08:00
+lastmod: 2026-08-19T15:55:15+08:00
 draft: false
 slug: MuvosL-2026-010
 categories:
@@ -10,9 +10,6 @@ categories:
 tags:
   - 渗透靶场
 ---
-[[Linux基础]]
-[[MySQL数据库]]
-
 # 1 信息收集
 
 ## 1.1 nmap信息挖掘

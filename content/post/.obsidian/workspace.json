@@ -125,7 +125,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "打靶/Lampiao/index.md",
+                "file": "打靶/Raven2/index.md",
                 "mode": "source",
                 "source": false
               },
@@ -271,7 +271,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "打靶/Lampiao/index.md",
+                "file": "打靶/Raven2/index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -302,9 +302,9 @@
   },
   "active": "c7eb8165102700b7",
   "lastOpenFiles": [
+    "打靶/Lampiao/index.md",
     "打靶/Raven2/index.md",
     "渗透项目实操/Raven2/Raven_2.md",
-    "打靶/Lampiao/index.md",
     "打靶/Raven2",
     "渗透项目实操/Lampiao/Lampiao.md",
     "打靶/Lampiao",
