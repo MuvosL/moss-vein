@@ -189,13 +189,16 @@
   },
   "active": "c7eb8165102700b7",
   "lastOpenFiles": [
-    "打靶/Lampiao/index.md",
+    "打靶/Raven2/images/Pasted image 20260819160628.png",
+    "漏洞复现/hutool_RCE【CVE-2025-56769】/index.md",
+    "漏洞复现/hutool_RCE【CVE-2025-56769】/images/63e60bc509aa5fcc7cacd00b334f630c.png",
+    "打靶/Webgoat/index.md",
     "打靶/Raven2/index.md",
+    "打靶/Lampiao/index.md",
     "渗透项目实操/Raven2/Raven_2.md",
     "打靶/Raven2",
     "渗透项目实操/Lampiao/Lampiao.md",
     "打靶/Lampiao",
-    "漏洞复现/hutool_RCE【CVE-2025-56769】/index.md",
     "打靶/Raven2/images/image.png",
     "打靶/Raven2/images/image 9.png",
     "打靶/Raven2/images/image 8.png",
@@ -205,7 +208,6 @@
     "打靶/Raven2/images/image 5.png",
     "打靶/Raven2/images/image 49.png",
     "打靶/Raven2/images/image 48.png",
-    "打靶/Raven2/images/image 47.png",
     "打靶/Raven2/images",
     "渗透项目实操/Raven2",
     "打靶/Lampiao/images",
@@ -224,7 +226,6 @@
     "AI“应用”/AI安全攻防实战全景/index.md",
     "AI“应用”/ai概念浅知/index.md",
     "AI“应用”/AI 安全攻防实战全景：从红队演练到智能体时代的防御重建/index.md",
-    "打靶/Webgoat/index.md",
     "打靶/第一章 应急响应-Linux日志分析/index.md",
     "碎碎念/序言/index.md",
     "碎碎念/ckjsck/index.md",
@@ -233,7 +234,6 @@
     "碎碎念/青藤/index.md",
     "玄机靶场/青藤篇/index.md",
     "碎碎念/青藤篇/index.md",
-    "博客/我的/index.md",
-    "碎碎念/测试/index.md"
+    "博客/我的/index.md"
   ]
 }

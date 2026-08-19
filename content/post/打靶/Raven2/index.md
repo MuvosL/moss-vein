@@ -2,7 +2,7 @@
 title: Raven2
 description: ""
 date: 2026-08-19T15:21:34+08:00
-lastmod: 2026-08-19T15:55:15+08:00
+lastmod: 2026-08-19T16:06:33+08:00
 draft: false
 slug: MuvosL-2026-010
 categories:
@@ -18,7 +18,7 @@ tags:
 
 使用`nmap`对`192.168.0.0`进行扫描，并根据靶机MAC地址确定靶机IP为`192.168.0.8`
 
-![image.png](image.png)
+![[Pasted image 20260819160628.png]]
 
 对靶机IP进行全端口扫描，80端口有HTTP服务，22端口是可以进行爆破的
 
