@@ -1,5 +1,7 @@
 {
   "attachmentFolderPath": "./images",
   "newFileLocation": "current",
-  "promptDelete": false
+  "promptDelete": false,
+  "alwaysUpdateLinks": true,
+  "showUnsupportedFiles": true
 }
