@@ -18,13 +18,13 @@ tags:
 
 使用nmap对192.168.0.0/24 进行扫描
 
-![c5146a2ac28f4469143c5e6024170d42](c5146a2ac28f4469143c5e6024170d42.png)
+![[c5146a2ac28f4469143c5e6024170d42.png]]
 
 根据MAC地址，确定这就是靶机的IP
 
 对靶场IP进行全端口扫描
 
-![a1ed5dffc99a8951c17ef3262cc1c7ca](a1ed5dffc99a8951c17ef3262cc1c7ca.png)
+![[a1ed5dffc99a8951c17ef3262cc1c7ca.png]]
 
 22端口可以爆破 80端口有http服务
 
@@ -32,11 +32,11 @@ tags:
 
 访问80端口，页面中有一个图案，查看页面源代码后发现并没有什么可用信息
 
-![a1b77be8de2c5f15db927036a94441fe](a1b77be8de2c5f15db927036a94441fe.png)
+![[a1b77be8de2c5f15db927036a94441fe.png]]
 
 再去访问1898端口，是一个登录页面
 
-![b9b6fec6504e2a5f44f9196cd9323b0b](b9b6fec6504e2a5f44f9196cd9323b0b.png)
+![[b9b6fec6504e2a5f44f9196cd9323b0b.png]]
 
 ## 1.3 手动收集信息
 
@@ -44,27 +44,27 @@ tags:
 
 这是一个经历，并且可以看到url这一栏出现了参数，可以对其进行更改进行其他页面的一些查看
 
-![b2a25a5b05a588cb741e4ce7c021ab87](b2a25a5b05a588cb741e4ce7c021ab87.png)
+![[b2a25a5b05a588cb741e4ce7c021ab87.png]]
 
 将1改成2看一看
 
-![5dbe5f5889c589b87575f5ec6bd16998](5dbe5f5889c589b87575f5ec6bd16998.png)
+![[5dbe5f5889c589b87575f5ec6bd16998.png]]
 
 有两个文件，可以看看
 
-![image-20251010164303800](image-20251010164303800.png)
+![[image-20251010164303800.png]]
 
 **audio.m4a**
 
 这是一个音频，说的是“**user tiago**”
 
-![f50090320303f00d8141ef877341730c](f50090320303f00d8141ef877341730c.png)
+![[f50090320303f00d8141ef877341730c.png]]
 
 **qrc.png**
 
 快扫！“**Try harder! muahuahua**”
 
-![9e6ed333afd8d0d0237e04ed1541eb13](9e6ed333afd8d0d0237e04ed1541eb13.png)
+![[9e6ed333afd8d0d0237e04ed1541eb13.png]]
 
 以上就是手动收集到的全部信息
 
@@ -76,13 +76,13 @@ tags:
 
 这个dirb和dirsearch、御剑那些都是差不多意思的
 
-![fbe60b37cdc06adb95363e46f4466b8a](fbe60b37cdc06adb95363e46f4466b8a.png)![19474df104ed3c2ed2541339f9b33342](19474df104ed3c2ed2541339f9b33342.png)
+![[fbe60b37cdc06adb95363e46f4466b8a.png]]![[19474df104ed3c2ed2541339f9b33342.png]]
 
 去访问一下robotx.txt，robots协议挺重要的，最近给新生出的ctf题目中也涉及到了robots协议的考察
 
 这里有几个重要的文件，打开看一看
 
-![7487afadf2bc0381be5575d544252f7c](7487afadf2bc0381be5575d544252f7c.png)
+![[7487afadf2bc0381be5575d544252f7c.png]]
 
 **CHANGELOG.txt**
 
@@ -90,7 +90,7 @@ change改变log记录，即版本变更记录，是一种记录文件，它详�
 
 为什么说这个版本这么重要，就拿windows举例吧，这个版本它被爆出来有漏洞了，但是有的人没有即时更新系统、补丁这些，并且恰好你查到目标机器的版本还是那个有漏洞的，那么就可以进行利用。
 
-![7aae3fbd980dce528b1ff43c637418b7](7aae3fbd980dce528b1ff43c637418b7.png)
+![[7aae3fbd980dce528b1ff43c637418b7.png]]
 
 可以看到这个drupal是7.54版本，去查询一下有没有对应的exp
 
@@ -129,7 +129,7 @@ change改变log记录，即版本变更记录，是一种记录文件，它详�
 >
 > `原文链接：https://blog.csdn.net/2301_78465476/article/details/144278669`
 
-![02975072bcf107607540fa6b3bc9ca1a](02975072bcf107607540fa6b3bc9ca1a.png)
+![[02975072bcf107607540fa6b3bc9ca1a.png]]
 
 ## 1.5 爬取网页信息
 
@@ -139,77 +139,77 @@ cewl：通过爬行网站关键信息生成一个社工性质的密码字典
 
 `cewl http://192.168.0.6:1898 -w /wa/lampiao/123.txt`
 
-![4b2c322dff5b8015b6d134441ab0b8cc](4b2c322dff5b8015b6d134441ab0b8cc.png)
+![[4b2c322dff5b8015b6d134441ab0b8cc.png]]
 
 # 2 暴力破解
 
 `hydra -l tiao -P /wa/lampiao/123.txt 192.168.0.6 ssh`
 
-![f97d43670037afca2666f39efdf6b213](f97d43670037afca2666f39efdf6b213.png)
+![[f97d43670037afca2666f39efdf6b213.png]]
 
 登录
 
-![b5fc9a88f99b5d0238ab022927f50a5a](b5fc9a88f99b5d0238ab022927f50a5a.png)
+![[b5fc9a88f99b5d0238ab022927f50a5a.png]]
 
 # 3 提权
 
 ## 3.1 msf拿shell
 
-![d7719e173443753a70588065af7fdf99](d7719e173443753a70588065af7fdf99.png)
+![[d7719e173443753a70588065af7fdf99.png]]
 
 搜索相关漏洞后，得到七个可用漏洞
 
-![84dd6809170f501595df74f7a5cc1319](84dd6809170f501595df74f7a5cc1319-1760091686939.png)
+![[84dd6809170f501595df74f7a5cc1319-1760091686939.png]]
 
 使用第一个，并查看使用漏洞是需要的变量
 
-![819ac4884294c5eb18a2880f8a35c83c](819ac4884294c5eb18a2880f8a35c83c.png)
+![[819ac4884294c5eb18a2880f8a35c83c.png]]
 
 需要一个rhost和rpost，设置一下
 
-![05d651e4a39f178cd61aa278b7bfc564](05d651e4a39f178cd61aa278b7bfc564.png)
+![[05d651e4a39f178cd61aa278b7bfc564.png]]
 
 run
 
-![05cc0846f2f27efc52973abcf0d17954](05cc0846f2f27efc52973abcf0d17954.png)
+![[05cc0846f2f27efc52973abcf0d17954.png]]
 
 进shell了，然后tty
 
-![9b71dc61126a961741e7f01adc06d55e](9b71dc61126a961741e7f01adc06d55e.png)
+![[9b71dc61126a961741e7f01adc06d55e.png]]
 
 ## 3.2 内核提权
 
 这儿利用CVE-2016-5195这个经典漏洞，使用这个脚本
 
-![841bf76fe5735b5bb477ca41dcc2f7d0](841bf76fe5735b5bb477ca41dcc2f7d0.png)
+![[841bf76fe5735b5bb477ca41dcc2f7d0.png]]
 
 开启一个http服务
 
 > 这里注意，你在哪个目录下开启的http服务，那么哪里就是根目录
 
-![d17c1f08896035e9c23932be2ab0767d](d17c1f08896035e9c23932be2ab0767d.png)
+![[d17c1f08896035e9c23932be2ab0767d.png]]
 
 在靶机也下载脚本
 
-![3444519b925e82435cc2699527747824](3444519b925e82435cc2699527747824.png)
+![[3444519b925e82435cc2699527747824.png]]
 
 直接运行权限是不够的
 
-![4df4c1c95e1e36b0dad475de11a7324f](4df4c1c95e1e36b0dad475de11a7324f.png)
+![[4df4c1c95e1e36b0dad475de11a7324f.png]]
 
 需要 chmod + x les.sh 一下，再运行
 
-![916832a6d70ba92afa9c939153f2ca46](916832a6d70ba92afa9c939153f2ca46.png)
+![[916832a6d70ba92afa9c939153f2ca46.png]]
 
 找一下exp
 
-![dd8a6c8d269d5c1e93f7a7553d93ed1d](dd8a6c8d269d5c1e93f7a7553d93ed1d.png)
+![[dd8a6c8d269d5c1e93f7a7553d93ed1d.png]]
 
 移动文件至桌面
 
 然后，在靶机通过http服务进行文件获取
 
-![7ca00ca7637992895c984e443f92c1ad](7ca00ca7637992895c984e443f92c1ad.png)
+![[7ca00ca7637992895c984e443f92c1ad.png]]
 
 先编译再执行
 
@@ -229,13 +229,13 @@ Wall 一般使用该选项，允许发出GCC能够提供的所有有用的警告
 
 ```
 
-![75d9232a3d6f490e45b879cbb4b978f3](75d9232a3d6f490e45b879cbb4b978f3.png)
+![[75d9232a3d6f490e45b879cbb4b978f3.png]]
 
-![8026e12c5c62c457d565232f4f30f3fb](8026e12c5c62c457d565232f4f30f3fb.png)
+![[8026e12c5c62c457d565232f4f30f3fb.png]]
 
 直接ssh root，读取flag
 
-![79c95196ff2ef8e980ab76d7b1ab3538](79c95196ff2ef8e980ab76d7b1ab3538.png)
+![[79c95196ff2ef8e980ab76d7b1ab3538.png]]
 
 9740616875908d91ddcdaa8aea3af366
 

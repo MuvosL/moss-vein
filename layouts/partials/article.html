@@ -46,10 +46,25 @@
       {{- else -}}
         {{ $content := .RawContent }}
         {{ range findRESubmatch `!\[\[([^\]]+)\]\]` .RawContent }}
-          {{ $img := $.Page.Resources.GetMatch (printf "**/%s" (index . 1)) }}
-          {{ if $img }}
-            {{ $content = replace $content (index . 0) (printf `![image](%s)` $img.RelPermalink) }}
-          {{ end }}
+          {{- $full := index . 0 -}}
+          {{- $target := replace (trim (index . 1) " ") "%20" " " -}}
+          {{- $parts := split $target "|" -}}
+          {{- $file := trim (index $parts 0) " " -}}
+          {{- $escaped := replaceRE `([\[\]*?\\])` `\$1` $file -}}
+          {{- $img := $.Page.Resources.GetMatch (printf "**/%s" $escaped) -}}
+          {{- if not $img -}}
+            {{- $img = $.Page.Resources.GetMatch $escaped -}}
+          {{- end -}}
+          {{- if $img -}}
+            {{- $alt := "image" -}}
+            {{- if and (gt (len $parts) 1) (ne (index $parts 1) "") -}}
+              {{- $suffix := trim (index $parts 1) " " -}}
+              {{- if not (in "0123456789" (substr $suffix 0 1)) -}}
+                {{- $alt = $suffix -}}
+              {{- end -}}
+            {{- end -}}
+            {{- $content = replace $content $full (printf `![%s](%s)` $alt $img.RelPermalink) -}}
+          {{- end -}}
         {{ end }}
         {{ $content | $.Page.RenderString }}
       {{- end -}}

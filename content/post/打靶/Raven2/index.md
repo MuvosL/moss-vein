@@ -22,62 +22,62 @@ tags:
 
 对靶机IP进行全端口扫描，80端口有HTTP服务，22端口是可以进行爆破的
 
-![image.png](image%201.png)
+![[image 1.png]]
 
 ## 1.2 HTTP信息挖掘
 
 访问80端口
 
-![image.png](image%202.png)
+![[image 2.png]]
 
-![image.png](image%203.png)
+![[image 3.png]]
 
 进行一下目录扫描
 
-![image.png](image%204.png)
+![[image 4.png]]
 
 可以看出他这是用wordpress搭建的这么一个网站，翻了翻各个目录后，进入/vendor/看看
 
-![image.png](image%205.png)
+![[image 5.png]]
 
 在PATH这个页面中发现了一段flag
 `flag1{a2c1f66d2b8051bd3a5874b5b6e43e21}`
 
-![image.png](image%206.png)
+![[image 6.png]]
 
 phpmailer是什么
 
-![image.png](image%207.png)
+![[image 7.png]]
 
 在搜索的时候，列表中有漏洞这个关键词
 
-![image.png](image%208.png)
+![[image 8.png]]
 
 这里还发现了一个版本信息
 
-![image.png](image%209.png)
+![[image 9.png]]
 
 # 2 查找漏洞信息并利用
 
-![image.png](image%2010.png)
+![[image 10.png]]
 
-![image.png](image%2011.png)
+![[image 11.png]]
 
 再回到kali
 
-![image.png](image%2012.png)
+![[image 12.png]]
 
 查找一下这个的完整路径在哪里，并将其移动到一个位置
 
-![image.png](image%2013.png)
+![[image 13.png]]
 
-![image.png](image%2014.png)
+![[image 14.png]]
 
 然后我们要对这个脚本中的一下参数进行更改
 
-![image.png](image%2015.png)
+![[image 15.png]]
 
-![image.png](image%2016.png)
+![[image 16.png]]
 
 这里刚开始运行的时候，缺少了些东西，先去安装了一些必要模块
 
@@ -85,19 +85,19 @@ phpmailer是什么
 
 然后`python3 40974.py`
 
-![image.png](image%2017.png)
+![[image 17.png]]
 
 开启监听
 
-![image.png](image%2018.png)
+![[image 18.png]]
 
 我们去访问刚刚在参数中设置的页面，然后它就会在当前目录下生成一个1.php，接下来再去访问，那么就会回来一个shell
 
-![image.png](image%2019.png)
+![[image 19.png]]
 
 当前是个伪shell，进入一下pty
 
-![image.png](image%2020.png)
+![[image 20.png]]
 
 # 3 信息收集
 
@@ -105,17 +105,17 @@ phpmailer是什么
 
 `find / -name flag*`
 
-![image.png](image%2021.png)
+![[image 21.png]]
 
-![image.png](image%2022.png)
+![[image 22.png]]
 
 上面还有个flag3，是个png类型的
 
-![image.png](image%2023.png)
+![[image 23.png]]
 
 接着跳转到flag3所在目录
 
-![image.png](image%2024.png)
+![[image 24.png]]
 
 `grep “password” -rn wp-config.php`
 
@@ -132,27 +132,27 @@ phpmailer是什么
 
 </aside>
 
-![image.png](image%2025.png)
+![[image 25.png]]
 
-![image.png](image%2026.png)
+![[image 26.png]]
 
 登录mysql
 
 查看一下基本信息，这里数据库是root权限
 
-![image.png](image%2027.png)
+![[image 27.png]]
 
-![image.png](image%2028.png)
+![[image 28.png]]
 
 这里关于mysql的一些安装的版本的信息
 
-![image.png](image%2029.png)
+![[image 29.png]]
 
 继续进行信息收集
 
-![image.png](image%2030.png)
+![[image 30.png]]
 
-![image.png](image%2031.png)
+![[image 31.png]]
 
 这些账号的密码无法破解
 
@@ -162,17 +162,17 @@ phpmailer是什么
 
 `show global variables like ‘secure%’;`
 
-![image.png](image%2032.png)
+![[image 32.png]]
 
 此时就是第三种情况
 
 找目录
 
-![image.png](image%2033.png)
+![[image 33.png]]
 
 然后，查看mysql是否可以远程访问，如果可以，使用msf脚本攻击
 
-![image.png](image%2034.png)
+![[image 34.png]]
 
 可以看到，不能进行远程访问
 
@@ -180,19 +180,19 @@ phpmailer是什么
 
 找寻exp
 
-![image.png](image%2035.png)
+![[image 35.png]]
 
-![image.png](image%2036.png)
+![[image 36.png]]
 
-![image.png](image%2037.png)
+![[image 37.png]]
 
 接下来就是熟悉的，开启http服务，让靶机从kali获取这个文件
 
-![image.png](image%2038.png)
+![[image 38.png]]
 
-![image.png](image%2039.png)
+![[image 39.png]]
 
-![image.png](image%2040.png)
+![[image 40.png]]
 
 接下来利用这个需要先创建一个表
 
@@ -200,35 +200,35 @@ phpmailer是什么
 
 create table moyeah(line blob);
 
-![image.png](image%2041.png)
+![[image 41.png]]
 
-![image.png](image%2042.png)
+![[image 42.png]]
 
-![image.png](image%2043.png)
+![[image 43.png]]
 
 接下来
 
-![image.png](image%2044.png)
+![[image 44.png]]
 
-![image.png](image%2045.png)
+![[image 45.png]]
 
-![image.png](image%2046.png)
+![[image 46.png]]
 
-![image.png](image%2047.png)
+![[image 47.png]]
 
 # 5 拓展知识
 
 在linux里，有一个存储账户的地方，这是我的kali里面的，可以看到root用户是什么样的一个格式在这里存放
 
-![image.png](image%2048.png)
+![[image 48.png]]
 
 我们可以在哪个靶机数据库中写函数内容那块儿，更改为，加入一个root用户
 
 我们现在这里准备一下一个用户
 
-![image.png](image%2049.png)
+![[image 49.png]]
 
-![image.png](image%2050.png)
+![[image 50.png]]
 
 select do_system('echo "moyeah:KA5Pm2R5$d7ltJ2Ck1GFgk9X69PVN4:0:0root:/root:/bin/bash" >> /etc/passwd')；
 
